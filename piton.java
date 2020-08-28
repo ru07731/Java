@@ -10,6 +10,7 @@ public class piton {
     public static BigDecimal term1 =  BigDecimal.ZERO;
     public static BigDecimal term2 =  BigDecimal.ZERO;
 
+    @SuppressWarnings("deprecation")
     public static void calcpi(int x)
     {
         for(int i=2;i<1000;i+=4)
@@ -33,9 +34,10 @@ public class piton {
 
         pi = pi.add(new BigDecimal (3));
 
-        pi = pi.setScale(x,  BigDecimal.ROUND_HALF_UP);
+        pi = pi.setScale(x, BigDecimal.ROUND_HALF_UP);
     }
 
+    @SuppressWarnings("InfiniteRecursion")
     public static void prompt()
     {
         System.out.println("How many digits of Pi");
